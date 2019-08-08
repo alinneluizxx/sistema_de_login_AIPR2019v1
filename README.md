@@ -2,7 +2,7 @@
 Sistema de Login com registro de novo usuário e recuperação de senha
 
 ## aula03 - 08/08/2019
-Sistemm a de validação dos formulários 
+Sistema de validação dos formulários 
 
 ## aula02 - 19/07/2019 
 :rocket: :moon: 50 anos do homem na Lua 🌝 🌚
