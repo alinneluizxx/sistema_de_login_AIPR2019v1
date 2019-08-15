@@ -168,15 +168,47 @@
             //Envio dos dados do formulário de login
             $('#btnEntrar').click(function(e) {
                 let formLogin = document.querySelector("#formLogin");
-                if (formLogin.checkValidity()){
+                if (formLogin.checkValidity()) {
                     e.preventDefault(); //Não recarregar a página
                     $.ajax({
                         url: 'recebe.php',
                         method: 'post',
-                        data: $('#formLogin').serialize()+'&action=login',
-                        success: function(resposta){
+                        data: $('#formLogin').serialize() + '&action=login',
+                        success: function(resposta) {
                             $('#alerta').show();
-                            $('#resultado').html("resposta"+resposta);
+                            $('#resultado').html("resposta" + resposta);
+                        }
+                    });
+                }
+            });
+
+            $('#btnRegistrar').click(function(e) {
+                let formCadastro = document.querySelector("#formCadastro");
+                if (formCadastro.checkValidity()) {
+                    e.preventDefault(); //Não recarregar a página
+                    $.ajax({
+                        url: 'recebe.php',
+                        method: 'post',
+                        data: $('#formCadastro').serialize() + '&action=cadastro',
+                        success: function(resposta) {
+                            $('#alerta').show();
+                            $('#resultado').html("resposta" + resposta);
+                        }
+                    });
+                }
+            });
+
+            $('#btnEnviarEmail').click(function(e) {
+                let formSenha = document.querySelector("#formSenha");
+                if (formSenha.checkValidity()) {
+                    e.preventDefault(); //Não recarregar a página
+                    $.ajax({
+                        url: 'recebe.php',
+                        method: 'post',
+                        data: $('#formSenha').serialize() + '&action=senha',
+                        success: function(resposta) {
+                            $('#alerta').show();
+                            $('#resultado').html("resposta" + resposta);
                         }
                     });
                 }
