@@ -176,7 +176,10 @@
                         data: $('#formLogin').serialize() + '&action=login',
                         success: function(resposta) {
                             $('#alerta').show();
-                            $('#resultado').html("resposta" + resposta);
+                            $('#resultado').html(resposta);
+                            if(resposta == "ok"){
+                                window.location = "profile.php";
+                            }
                         }
                     });
                 }
@@ -192,7 +195,7 @@
                         data: $('#formCadastro').serialize() + '&action=cadastro',
                         success: function(resposta) {
                             $('#alerta').show();
-                            $('#resultado').html("resposta" + resposta);
+                            $('#resultado').html(resposta);
                         }
                     });
                 }
@@ -208,7 +211,7 @@
                         data: $('#formSenha').serialize() + '&action=senha',
                         success: function(resposta) {
                             $('#alerta').show();
-                            $('#resultado').html("resposta" + resposta);
+                            $('#resultado').html(resposta);
                         }
                     });
                 }
