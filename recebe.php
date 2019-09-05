@@ -25,7 +25,10 @@ if(isset($_POST['action']) && $_POST['action'] == 'login'){
     $sql->execute();
 
     $busca = $sql->fetch();
+    
     if($busca != null){
+        //Colocando o nome do usuário na Sessão
+        $_SESSION['nomeUsuario'] = $nomeUsuario;
         echo"ok";
     }else{
         echo"Usuário e senha não conferem!";

@@ -1,3 +1,11 @@
+<?php 
+    
+    session_start();
+    if(isset($_SESSION['nomeUsuario']))
+        //Bloqueando usuários logados
+        header("location: profile.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
-    <title>Sistema de Login Sistemas ALG</title>
+    <title>ALG Systems</title>
     <style>
         #caixaCadastro,
         #caixaRecuperarSenha,
@@ -177,7 +185,7 @@
                         success: function(resposta) {
                             $('#alerta').show();
                             $('#resultado').html(resposta);
-                            if(resposta == "ok"){
+                            if (resposta === "ok") {
                                 window.location = "profile.php";
                             }
                         }
