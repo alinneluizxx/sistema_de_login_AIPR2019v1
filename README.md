@@ -1,6 +1,9 @@
 # sistema_de_login_AIPR2019v1
 Sistema de Login com registro de novo usuário e recuperação de senha
 
+## aula07 - 06/09/2019
+Criação do avatar(imagem de perfil),criação de uma nova coluna avatar no banco de dados.
+
 ## aula06 - 30/08/2019
 Cadastro de usuários.
 
