@@ -63,21 +63,21 @@ require_once 'session.php';
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/expo1200x675.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block bg-dark text-light">
                             <h5>Exposição</h5>
                             <p>Exposição de obras de Arte.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/paisagem1200x675.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block text-dark">
+                        <div class="carousel-caption d-none d-md-block bg-dark text-light">
                             <h5>Paisagem</h5>
                             <p>Uma paisagem difernte mas interessante.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/vila1200x675.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block bg-dark text-light">
                             <h5>Vila</h5>
                             <p>Vila durante a República Velha.</p>
                         </div>
