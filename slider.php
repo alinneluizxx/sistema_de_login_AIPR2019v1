@@ -2,8 +2,9 @@
 //Protegendo profile.php só para usuários logados
 require_once 'session.php';
 ?>
+
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -13,10 +14,11 @@ require_once 'session.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Perfil de <?= $usuario ?></title>
+    <title>Álbum de Fotos</title>
 </head>
 
-<body class="bg-dark">
+<body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">ALG Systems</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +27,7 @@ require_once 'session.php';
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="profile.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link 1 </a>
@@ -38,30 +40,59 @@ require_once 'session.php';
                         <?= $usuario ?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="slider.php">Fotos</a>
+                        <a class="dropdown-item" href="#">Fotos</a>
                         <a class="dropdown-item" href="#">Config.</a>
                         <a class="dropdown-item" href="sair.php">Sair</a>
-
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-    <main class="container mt-4">
 
-        <div class="row">
-            <div class="offset-lg-2 col-3">
-                <img src="<?= $urlAvatar ?>" alt="Foto de <?= $usuario ?>" height="200" width="200">
-            </div>
+    <h1>Álbum de Fotos</h1>
 
-            <div class="col-7">
-                <h1 class="text-light">Perfil de usuário</h1>
-                <h2 class="text-light">Nome: <?= $nome ?></h2>
-                <h2 class="text-light">E-mail: <?= $email ?></h2>
-                <h2 class="text-light">Data de Cadastro: <?= $dataCriacao ?></h>
+
+    <main class="container">
+        <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/expo1200x675.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Exposição</h5>
+                            <p>Exposição de obras de Arte.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/paisagem1200x675.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-dark">
+                            <h5>Paisagem</h5>
+                            <p>Uma paisagem difernte mas interessante.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/vila1200x675.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Vila</h5>
+                            <p>Vila durante a República Velha.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
-
     </main>
 
     <!-- Optional JavaScript -->
