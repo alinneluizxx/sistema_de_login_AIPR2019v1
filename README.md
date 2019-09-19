@@ -1,7 +1,11 @@
 # sistema_de_login_AIPR2019v1
 Sistema de Login com registro de novo usuário e recuperação de senha
 
-# aula08 - 10/09/2019
+## aula09 - 12/09/2019
+Desafio do carrossel protegido por login, arquivo slider.php
+Preparação para geração de senha, página e alterações no banco de dados.
+
+## aula08 - 10/09/2019
 Fizemos funcionar o sistema de lembrar o usuário e senha com cookies
 
 ## aula07 - 06/09/2019
